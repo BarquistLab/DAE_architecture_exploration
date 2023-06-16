@@ -33,7 +33,7 @@ bn_layer = min(layer_sizes)
 num_layers = len(layer_sizes)
 
 compute_BN_activations = False	# Set to True if the conditions which activate each node are desired to be known
-num_jobs = 1			# The number of networks to examine
+num_jobs = 10			# The number of networks to examine
 ens_index = 0			# If multiple ensembles have been run, this index can be changed to distinguish between them 
 jobs = range(num_jobs)
 

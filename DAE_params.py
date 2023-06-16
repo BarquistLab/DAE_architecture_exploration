@@ -8,7 +8,7 @@ save_net = True						# Set to False if only the training trajectory is needed, a
 
 corr_lvl = .1						# Input data corruption level to train denoising.
 lr = 1e-4							# Training learning rate.
-epcs = 154						# Number of epochs to train.
+epcs = 166						# Number of epochs to train.
 bs = 5							# Batch size for training.
 
 

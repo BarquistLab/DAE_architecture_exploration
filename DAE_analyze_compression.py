@@ -11,7 +11,7 @@ def list_format(entry):
 
 store_probs = False # Set to True to generate a file with computed probabilities to make future analyese faster.
 data_collection = "E_coli_PRECISE2"
-file_name = 'E_coli_PRECISE2_tied_True_layers_2000_1000_50_activs_sigmoid_sigmoid_sigmoid_sigmoid_sigmoid_sigmoid_lr_0.0001_epcs_154_bs_5_jobs_1_dprs_0.0_0.0_0.0_0.0_0.0_0.0_0'
+file_name = 'E_coli_PRECISE2_tied_True_layers_2000_1000_50_activs_sigmoid_sigmoid_sigmoid_sigmoid_sigmoid_sigmoid_lr_0.0001_epcs_154_bs_5_jobs_10_dprs_0.0_0.0_0.0_0.0_0.0_0.0_0'
 bn_layer = min([int(term) for term in file_name.split('layers')[1].split('activs')[0].split('_')[1:-1]])
 
 
@@ -82,7 +82,7 @@ gene_feats = {'Op_neg':0, 'GS_neg':0, 'GO_neg':0, 'eco_neg':0,
 
 print('Begin enrichment...')
 t0 = time()
-for i,node in enumerate([list(BN_vectors)[0]]):
+for i,node in enumerate([list(BN_vectors)]):
 	print('\tNetwork_node:', node)
 	
 	signi_terms_pos = {}
@@ -188,7 +188,10 @@ for i,node in enumerate([list(BN_vectors)[0]]):
 	
 	print('\tNumber of enriched terms:', BH_index)
 	signi_terms = list(sorted_signi[:BH_index])
-	
+	print()
+	for term in signi_terms:
+		print('\t', term[1].replace('_neg', '').replace('_pos', ''), '+'*int('pos' in term[1]) + '-'*int('neg' in term[1]))
+	print()
 	###################################################
 	# Save the enriched gene sets as a feather file
 	# for each node.
