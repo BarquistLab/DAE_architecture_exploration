@@ -16,7 +16,7 @@ Note that upon completion, both the final network, and the training loss traject
 
 ## Plotting training trajectories to determine the optimal number of epochs
 
-This script can be run even if the above step hasn't been taken; there are already 10 trajectory files provided in the Training\_trajs/ folder. The network architecture and training parameters corresponding to the trajectories to plot are specified in the DAE_params.py script. To plot the already provided results, the variable epcs must be set to 300 in this script. Then the following can be run:
+This script can be run even if the above step hasn't been taken; there are already 10 trajectory files provided in the Training\_trajs/ folder. The network architecture and training parameters corresponding to the trajectories to plot are specified in the DAE_params.py script. To plot the already provided results, the variable epcs must be set to 300 in this script, then the following can be run:
 
 > python DAE\_plot\_trajectories.py
 
@@ -31,7 +31,7 @@ Next, we'd like to determine what each of the nodes at the bottleneck layer of t
 
 To perform this step, simply run
 
-> python DAE\_activate_\nets.py
+> python DAE\_activate\_nets.py
 
 10 example networks of the 2000-1000-(50) architecture are already provided in the Networks/ folder. These networks were run to 154 epochs, and so this parameter (epcs) must be changed in the DAE_params.py script before this step can be run. The resulting vectors are saved in the BN\_activations/ folder.
 
