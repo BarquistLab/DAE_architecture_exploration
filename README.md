@@ -35,9 +35,9 @@ To perform this step, simply run
 
 10 example networks of the 2000-1000-(50) architecture are already provided in the Networks/ folder. These networks were run to 154 epochs, and so this parameter (epcs) must be changed in the DAE_params.py script before this step can be run. The resulting vectors are saved in the BN\_activations/ folder.
 
-Now that we have these bottleneck node vectors, we'd like to perform enrichment analysis to determine their biological significance. For this, we compute the probabilities of each enriched gene sets based on the hypergeometric distribution, and then correct for multiple hypotheis testing using the Benjamini-Hochberg method. 
+Now that we have these bottleneck node vectors, we'd like to perform enrichment analysis to determine their biological significance. For this, we compute the probabilities of each enriched gene set based on the hypergeometric distribution, and then correct for multiple hypotheis testing using the Benjamini-Hochberg method. 
 
-A collection of gene sets for enrichment are already provided in the E\_coli\_PRECISE2\_features.ftr file.
+A collection of gene sets for enrichment are already provided in the E\_coli\_PRECISE2\_features.ftr file. We have also provided these same gene sets in the file Known\_gene\_sets.csv so that users can easily explore their contents.
 
 Note that which network ensemble to examine is specified by the file_name variable, and is currently set to look for an ensemble of 10 2000-1000-(50) networks trained to 154 epochs.
 
