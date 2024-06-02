@@ -237,7 +237,7 @@ for job in jobs:
 # Convert results to a dictionary for explort.
 ################################################
 BN_activ_data = {"genes":genes}
-for i,net_BN in enumerate(BN_vecs):
+for i,net_BN in enumerate(list(BN_acti_data)):
 	BN_activ_data[net_BN] = list(bn_expr[i])
 	
 ##############################################
