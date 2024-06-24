@@ -1,8 +1,8 @@
 # DAE architecture exploration
 
-Pipeline for the exploration of denoising autoencoder (DAE) architectures performed in the paper 'Network depth affects inference of gene sets from bacterial transcriptomes using denoising autoencoders.' If you use this analysis, please cite our preprint.
+Pipeline for the exploration of denoising autoencoder (DAE) architectures performed in the paper 'Network depth affects inference of gene sets from bacterial transcriptomes using denoising autoencoders.' If you use this analysis, please cite our paper.
 
-[doi.org/10.1101/2023.05.30.542622](https://doi.org/10.1101/2023.05.30.542622)
+[doi.org/10.1093/bioadv/vbae066](https://doi.org/10.1093/bioadv/vbae066)
 
 ## Training DAEs on a bacterial gene expression compendium
 
